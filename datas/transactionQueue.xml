@@ -1,0 +1,22 @@
+<transactionQueue>
+    <transaction>
+        <userId></userId>
+        <transactionId></transactionId>
+        <productId></productId>
+        <productName></productName>
+        <productNumber></productNumber>
+        <fromPlace></fromPlace>
+        <toPlace></toPlace>
+        <date></date>
+    </transaction>
+    <transaction>
+        <userId></userId>
+        <transactionId></transactionId>
+        <productId></productId>
+        <productName></productName>
+        <productNumber></productNumber>
+        <fromPlace></fromPlace>
+        <toPlace></toPlace>
+        <date></date>
+    </transaction>
+</transactionQueue>

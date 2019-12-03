@@ -1,0 +1,18 @@
+<users>
+    <user>
+        <userId></userId>
+        <userName></userName>
+        <password></password>
+        <telephone></telephone>
+        <email></email>
+        <status></status>
+    </user>
+    <user>
+        <userId></userId>
+        <userName></userName>
+        <password></password>
+        <telephone></telephone>
+        <email></email>
+        <status></status>
+    </user>
+</users>
