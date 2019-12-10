@@ -1,14 +1,18 @@
 import os
 import random
 import socket
+from datetime import datetime
 import mysql.connector
 from contextlib import closing
+import hashlib
 import struct
 import threading
-import time
+import datetime
 import traceback
 import TcpServerNode
 import services.PacketService as pack
+import json
+import time
 
 Node = TcpServerNode.Node()
 NodeConnection = TcpServerNode.NodeConnection()
@@ -21,6 +25,26 @@ database = mysql.connector.connect(
     database="farmchain"
 )
 
+def getDateTime():
+    dt = str(datetime.datetime.now()).split(' ')
+    d = str(dt[0]).split('-')
+    t = str(dt[1]).split(':')
+    date = ""
+    time = ""
+    for i in range(len(d)):
+        date = date + str(d[i])
+    for j in range(len(t) - 1):
+        time = time + str(t[j])
+
+    dateTime = str(date) + str(time)
+    return dateTime
+
+
+def hashCreator():
+    dateTime = getDateTime()
+    result = hashlib.sha256(dateTime.encode()).hexdigest()
+
+    return result
 
 def findFreePort():
     with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as s:
@@ -77,7 +101,71 @@ def makeOnline(minerId):
 
     checkHost(minerId)
 
-def packetOperation(packet):
-    packetHeader = packet[0]
-    packetBody = packet[1]
-    pack.Packet.packetRouter(packetHeader)
+    #1-> start server and client at the same time
+    #2-> listen network
+
+def checkUserEntry(packet):
+    userId = packet[0]
+    userPsw = packet[1]
+
+
+def addBlockchain(transaction):
+    hsh = hashCreator()
+    timestamp = getDateTime()
+    data = []
+    length = 0
+    previousHash = ""
+    chain={}
+    with open("/datas/blockchain.json",'r') as f:
+        data = json.load(f)
+        blockchain = data['blockchain']
+        blockchainLength = len(blockchain)
+        previousBlock = blockchain[blockchainLength-1]
+        previousHash = previousBlock['previousHash']
+        chain = {
+            "hash":str(hsh),
+            "previousHash":str(previousHash),
+            "transaction":transaction,
+            "timestamp":str(timestamp)
+        }
+        data['blockchain'].append(chain)
+    with open("/datas/blockchain.json",'w') as file:
+        json.dump(data,file)
+
+def minerRace():
+    cnt = 0
+    a = str(datetime.datetime.now()).split(' ')
+    b = str(a[1]).split(':')
+    strt = b[2]
+    strt = float(strt)
+    while (True):
+        timestamp = time.time()
+        timestamp = str(timestamp)
+        tm = timestamp.split('.')
+        msg = "WIN"
+        msg = str(tm[1]) + msg
+        hsh = hashlib.sha256(msg.encode()).hexdigest()
+        x = str(datetime.datetime.now()).split(' ')
+        y = str(x[1]).split(':')
+        fnsh = y[2]
+        fnsh = float(fnsh)
+        result = fnsh - strt
+        if int(result) == 15:
+            print("LOSER timeout...")
+            break
+        if msg.startswith('000'):
+            print("ok")
+            print(strt)
+            print(fnsh)
+            print(result)
+            print(msg)
+            print(hsh)
+            break
+        else:
+            print("wait")
+            cnt = cnt + 1
+            print(cnt)
+
+
+
+

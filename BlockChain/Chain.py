@@ -7,6 +7,13 @@ class Chain:
     transaction = []
     timeStamp = ""
 
+    def __init__(self,hash,prevHash,transaction,timeStamp):
+        self.hash = hash
+        self.prevHash = prevHash
+        self.transaction = transaction
+        self.timeStamp = timeStamp
+
+
     def createChain(self):
         chain = {
             "hash":self.hash,

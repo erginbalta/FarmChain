@@ -1,7 +1,7 @@
 
 class Packet:
     packetType=[
-        "SRC","SRSL","TRN","PRW","CNS","WIN"
+        "SRC","SRSL","TRN","PRW","CNS","WIN","ENT","ERSL"
     ]
 
     def packetRouter(self, packetHeader):
@@ -21,4 +21,7 @@ class Packet:
                 pass
             elif packetHeader == self.packetType[5]:
                 pass
-
+            elif packetHeader == self.packetType[6]:
+                pass
+            elif packetHeader == self.packetType[7]:
+                pass

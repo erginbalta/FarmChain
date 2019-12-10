@@ -45,6 +45,9 @@ def sendSearchRequest(productName):
         print("...wait...")
     minerHost = miner[1]
     minerPort = miner[2]
+    #1-> start server and client at the same time
+    #2-> send packet to online miner
+    #3-> while receive request from miner, listen network
 
 def packetCreator(packetBody):
     packetType = pack.Packet.packetType[0]
