@@ -1,1 +1,44 @@
-{"blockchain": [{"hash": "62306d5ef35ea90f93fe1b677aa30e07ed7a21a38ea736ab6bcecc73bacd4067", "previousHash": 0, "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912041738"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "69742d8ffe783b2da943f7cc15c0ef889b945df9ebd788e67ae5278149376b15", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912041757"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}, {"hash": "e125rgkshd255ashbajshvdjhasd186asdjg", "previousHash": "41a201d409ae873a08232c8c9062c2fd851a6e8df29b3772881cd2ea1b2c5f4a", "transaction": {"transactionId": "TRN0001", "productId": "APPL001", "productName": "apple", "productNumber": 458, "fromPlace": "abb street, 254. field, Pazar,Rize", "toPlace": "dogus cay fabrikasi, abbs street, no256, Pazar,Rize", "date": "201908121630"}, "timestamp": "201912101306"}]}
+[
+  {
+    "hash": "bfb94b07a0e682e4e200693f6f55e8842738fce02173937e883b50033ca19d51",
+    "previousHash": "0",
+    "transaction": {
+      "transactionId": "TRN23324",
+      "productId": "TEA",
+      "productName": "cay",
+      "productNumber": 250,
+      "fromPlace": "abc tarlasi, rize,pazar",
+      "toPlace": "xyz warhouse, rize,merkez",
+      "date": "202001071731"
+    },
+    "timestamp": "202001071731"
+  },
+  {"hash": "76fe9f55b7403e76dfa399bd550a80028e519958ba1e169a3142b7a616c8cdbe",
+    "previousHash": "bfb94b07a0e682e4e200693f6f55e8842738fce02173937e883b50033ca19d51",
+    "transaction": {
+      "transactionId": "TRN91160",
+      "productId": "PCH",
+      "productName": "seftali",
+      "productNumber": 250,
+      "fromPlace": "asd tarlasi, bursa",
+      "toPlace": "pqr warhouse, bursa,nilufer",
+      "date": "202001071738"
+    },
+    "timestamp": "202001071738"
+  },
+  {"hash": "76fe9f55b7403e76dfa399bd550a80028e519958ba1e169a3142b7a616c8ach",
+    "previousHash": "76fe9f55b7403e76dfa399bd550a80028e519958ba1e169a3142b7a616c8cdbe",
+    "transaction": {
+      "transactionId": "TRN91198",
+      "productId": "TEA",
+      "productName": "cay",
+      "productNumber": 250,
+      "fromPlace": "xyz warhouse, rize,merkez",
+      "toPlace": "rpls warhouse, trabzon,merkez",
+      "date": "202001071738"
+    },
+    "timestamp": "202001071738"
+  }
+
+]
+

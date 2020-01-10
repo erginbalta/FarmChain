@@ -3,7 +3,6 @@
 import mysql.connector
 from contextlib import closing
 import socket
-import services.PacketService as pack
 
 database = mysql.connector.connect(
     host="localhost",
@@ -26,7 +25,7 @@ def checkOnlineMiners():
     sql = "select * from miners where status = 1;"
     mycursor.execute(sql)
     result = mycursor.fetchall()
-    return result
+    return result[0]
 
 
 def getCustomerInfo():
@@ -36,23 +35,8 @@ def getCustomerInfo():
 
     return [cusHost,cusPort]
 
-def sendSearchRequest(productName):
-    productName = str(productName).lower()
-    while(True):
-        miner = checkOnlineMiners()
-        if miner != []:
-            break
-        print("...wait...")
-    minerHost = miner[1]
-    minerPort = miner[2]
-    #1-> start server and client at the same time
-    #2-> send packet to online miner
-    #3-> while receive request from miner, listen network
 
-def packetCreator(packetBody):
-    packetType = pack.Packet.packetType[0]
-    packetType = str(packetType)
-    packet = [packetType,packetBody]
+
+def packetCreator(packetBody,host,port):
+    packet = [packetHeader,packetBody,host,port]
     return packet
-
-

@@ -1,0 +1,32 @@
+[
+  {
+    "userId": "USR1",
+    "password": "ahmet12345",
+    "name": "ahmet",
+    "surname": "akinci",
+    "company": "abcticaret",
+    "status": "manager"
+  },
+  {"userId": "USR2",
+    "password": "ergn12345",
+    "name": "ergin",
+    "surname": "balta",
+    "company": "baltaTicaret",
+    "status": "Manager"
+  },
+  {"userId": "USR3",
+    "password": "mht12345",
+    "name": "mehmet",
+    "surname": "hasir",
+    "company": "hasirticaret",
+    "status": "manager"
+  },
+  {
+    "userId": "USR4",
+    "password": "slm12345",
+    "name": "selim",
+    "surname": "selcuk",
+    "company": "selcukticaret",
+    "status": "manager"
+  }
+]
