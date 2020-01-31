@@ -37,25 +37,7 @@ def trasactionEnterScreen():
             break
     print(result)
 
-def sendingClient(packet):
-    skt = socket.socket()
-    miner = usr.minerInfo()
-    skt.connect((miner[0],int(miner[1])))
-    skt.send(packet)
-    skt.close()
 
-def sendMinerRequest():
-    packet = usr.sendingMinerRequestPacket()
-    thread = threading.Thread(target=sendingClient, args=(packet,))
-    thread.start()
-    info = usr.getUserConnectionInfo()
-    miner = usr.minerInfo()
-    skt = socket.socket()
-    skt.bind((info[0],info[1]))
-    skt.listen(3)
-    while(True):
-        c,addr = skt.accept()
-        result = c.recv(4046)
 
 
 

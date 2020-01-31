@@ -55,7 +55,6 @@ def minerInfo():
     port = result[2]
     return [host,port]
 
-
 def userInfoPacket(password,name,surname,company,status):
     info = getUserConnectionInfo()
     userId = userIdCreator()
@@ -75,9 +74,6 @@ def transactionPacketCreator(productId,productName,productNumber,fromPlace,toPla
     packet = [packetType[1],[transactionId,productId,productName,productNumber,fromPlace,toPlace,date],info[0],info[1]]
     return packet
 
-def sendingMinerRequestPacket():
-    packetHeader = "MNRQST"
-    packet = [packetType]
-    return packet
+
 
 

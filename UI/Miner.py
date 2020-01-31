@@ -74,7 +74,7 @@ def minerScreen(userId):
 
             else:
                 rslt = mnr.packetSeparator(result)
-                if rsl !=  None:
+                if rslt !=  None:
                     threadSend = threading.Thread(target=sendResponse, args=(rslt,))
                     threadSend.start()
 

@@ -1,6 +1,5 @@
 import random
 import socket
-from datetime import datetime
 import mysql.connector
 from contextlib import closing
 import hashlib
@@ -22,6 +21,7 @@ def timeRace():
     currentDateTime = str(dttm).split(' ')
     currentTime = currentDateTime[1]
     return currentTime
+
 
 def getDateTime():
     dt = str(datetime.datetime.now()).split(' ')
@@ -49,18 +49,7 @@ def findFreePort():
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         return s.getsockname()[1]
 
-def saveMiner(userId):
-    hst = socket.gethostname()
-    host = socket.gethostbyname(hst)
-    port = str(findFreePort())
-    status = True
 
-    mycursor = database.cursor()
-    sql = "insert into miners (host,port,userId,status) values (%s,%s,%s,%s);"
-    values = (host,port,status)
-    mycursor.execute(sql,values,status)
-    database.commit()
-    print(str(mycursor.rowcount) +"Miner Saved...")
 
 def getMinerInfo():
     hst = socket.gethostname()
@@ -106,23 +95,7 @@ def makeOffline(userId):
     database.commit()
     print(">>>OFFLINE>>>")
 
-def seeTransactionQueue():
-    data = []
-    with open("/datas/transactionQueue.json",'r') as outfile:
-        data = json.load(outfile)
-    for i in data:
-        print("x"*10)
-        print(i)
-    print("x"*10)
 
-def seeBlockchain():
-    data = []
-    with open("/datas/blockchain.json",'r') as file:
-        data = json.load(file)
-    for i in data:
-        print("x"*10)
-        print(i)
-    print("x"*10)
 
 def findLastBlock():
     with open("/datas/blockchain.json",'r') as f:

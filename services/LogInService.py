@@ -32,18 +32,6 @@ def checkMiner(userId):
     else:
         return False
 
-def minerLogIn(userId,password):
-    data = []
-    x = checkMiner(userId)
-    if x == True:
-        with open("C:/repos/FarmChain/datas/userInformation.json",'r') as f:
-            user = json.load(f)
-            for i in user:
-                if userId == i['userId'] and password == i['password']:
-                    return True
-            else:
-                return False
-
 def getFreeMiners():
     mycursor = database.cursor()
     sql = "select * from miners where status=1;"
@@ -63,6 +51,18 @@ def userConnectionObjects():
         host = socket.gethostbyname(hst)
         port = findFreePort()
         return [host,port]
+
+def minerLogIn(userId,password):
+    data = []
+    x = checkMiner(userId)
+    if x == True:
+        with open("C:/repos/FarmChain/datas/userInformation.json",'r') as f:
+            user = json.load(f)
+            for i in user:
+                if userId == i['userId'] and password == i['password']:
+                    return True
+            else:
+                return False
 
 def logInPacketCreator(userId,password):
     info = userConnectionObjects()
